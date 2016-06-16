@@ -22,22 +22,14 @@ module.exports = {
         type    : 'string',
         required: true
     },
-    gender: {
-        type: 'string'
-    },
-    about: {
-        type      : 'text',
-        defaultsTo: 'Write about yourself !!'
-    }, 
     events: {
       collection: 'event',
       via       : 'owner'
-    },
-      
+    }, 
   	toJSON: function () {
-  		var out = this.toObject();
+        var out = this.toObject();
         delete out.password;
-  		return out;
+        return out;
   	}
   },
     
@@ -49,12 +41,13 @@ module.exports = {
   			if(err){
   				callback(err);
   			} else {
-  				user.password = hash;
+                user.password = hash;
                 callback();
   			}
   		});
   	});
   },
+    
   beforeUpdate : function (user, callback) {
     if(!user.password) callback();
     else {

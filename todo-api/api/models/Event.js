@@ -13,8 +13,8 @@ module.exports = {
         required: true
     },
     dueDate: {
-        type     : 'datetime',
-        required : true,
+        type    : 'datetime',
+        required: true,
     },
     place: {
         type    : 'string',
@@ -24,11 +24,13 @@ module.exports = {
         type: 'text'
     },
     isDeleted: {
-        type: 'boolean'
+        type      : 'boolean',
+        defaultsTo: false,
     },
     owner: {
       columnName: 'userId',
-      model: 'user'
+      model     : 'user',
+      required  : true
     }
   }
 };
