@@ -1,7 +1,7 @@
 /**
  * Event.js
  *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @description :: It represent Eventa schema 
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
@@ -28,9 +28,9 @@ module.exports = {
         defaultsTo: false,
     },
     owner: {
-      columnName: 'userId',
-      model     : 'user',
-      required  : true
+        columnName: 'userId',
+        model     : 'user',
+        required  : true
     }
   }
 };
