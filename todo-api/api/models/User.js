@@ -9,27 +9,27 @@ module.exports = {
     
   attributes: {
     name: {
-        type    : 'string',
-        required: true,
-        size    : 250
+      type    : 'string',
+      required: true,
+      size    : 250
     },
     email: {
-        type    : 'email',
-        required: true,
-        unique  : true
+      type    : 'email',
+      required: true,
+      unique  : true
     },
     password: {
-        type    : 'string',
-        required: true
+      type    : 'string',
+      required: true
     },
     events: {
-        collection: 'event',
-        via       : 'owner'
+      collection: 'event',
+      via       : 'owner'
     }, 
     toJSON: function () {
-        var out = this.toObject();
-        delete out.password;
-        return out;
+      var out = this.toObject();
+      delete out.password;
+      return out;
     }
   },
     
@@ -37,14 +37,14 @@ module.exports = {
   // Lifecycle Callbacks
   beforeCreate : function (user, callback) {
     bcrypt.genSalt(10, function (err, salt){
-        bcrypt.hash(user.password, salt, function (err, hash){
-            if(err){
-                callback(err);
-            } else {
-                user.password = hash;
-                callback();
-            }
-        });
+      bcrypt.hash(user.password, salt, function (err, hash){
+        if(err){
+          callback(err);
+        } else {
+          user.password = hash;
+          callback();
+        }
+      });
     });
   },
     

@@ -1,7 +1,7 @@
 /**
  * Event.js
  *
- * @description :: It represent Eventa schema 
+ * @description :: It represent Event schema 
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
@@ -9,28 +9,28 @@ module.exports = {
 
   attributes: {
     title: {
-        type    : 'string',
-        required: true
+      type    : 'string',
+      required: true
     },
     dueDate: {
-        type    : 'datetime',
-        required: true,
+      type    : 'datetime',
+      required: true,
     },
     place: {
-        type    : 'string',
-        required: true
+      type    : 'string',
+      required: true
     },
     description: {
-        type: 'text'
+      type: 'text'
     },
     isDeleted: {
-        type      : 'boolean',
-        defaultsTo: false,
+      type      : 'boolean',
+      defaultsTo: false,
     },
     owner: {
-        columnName: 'userId',
-        model     : 'user',
-        required  : true
+      columnName: 'userId',
+      model     : 'user',
+      required  : true
     }
   }
 };
