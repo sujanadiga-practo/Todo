@@ -1,0 +1,16 @@
+
+module.exports = {
+
+  port: process.env.PORT || 8080,
+
+  MysqlServer: {
+    adapter: 'sails-mysql',
+    host: 'localhost',
+    user: 'user-name',
+    password: 'password', 
+    database: 'todo'
+  },
+  
+  environment: process.env.NODE_ENV || 'development'
+
+};
