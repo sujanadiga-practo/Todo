@@ -39,6 +39,6 @@
   "author": "sujanadiga",
   "license": "",
   "devDependencies": {
-    "eslint-config-practo": "^0.1.5"
+    "eslint": "^2.12.0"
   }
 }
