@@ -4,7 +4,7 @@
  * @description :: It represent User schema 
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
-var bcrypt = require("bcrypt");
+var bcrypt = require('bcrypt');
 module.exports = {
     
   attributes: {
@@ -35,10 +35,10 @@ module.exports = {
     
     
   // Lifecycle Callbacks
-  beforeCreate : function (user, callback) {
+  beforeCreate: function (user, callback) {
     bcrypt.genSalt(10, function (err, salt){
       bcrypt.hash(user.password, salt, function (err, hash){
-        if(err){
+        if (err) {
           callback(err);
         } else {
           user.password = hash;
@@ -48,12 +48,12 @@ module.exports = {
     });
   },
     
-  beforeUpdate : function (user, callback) {
-    if(!user.password) callback();
+  beforeUpdate: function (user, callback) {
+    if (!user.password) callback();
     else {
       bcrypt.genSalt(10, function (err, salt){
         bcrypt.hash(user.password, salt, function (err, hash){
-          if(err){
+          if (err) {
             callback(err);
           } else {
             user.password = hash;
@@ -62,6 +62,6 @@ module.exports = {
         });
       });
     }
-  },
+  }
 };
 
