@@ -32,6 +32,7 @@ module.exports = {
       model     : 'user',
       required  : true
     }
-  }
+  },
+  tableName: 'events'
 };
 

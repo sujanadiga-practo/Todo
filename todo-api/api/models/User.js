@@ -33,7 +33,8 @@ module.exports = {
     }
   },
     
-    
+  tableName: 'users',
+  
   // Lifecycle Callbacks
   beforeCreate: function (user, callback) {
     bcrypt.genSalt(10, function (err, salt){
