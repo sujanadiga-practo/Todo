@@ -27,7 +27,7 @@ module.exports = {
       type      : 'boolean',
       defaultsTo: false
     },
-    owner: {
+    user: {
       columnName: 'userId',
       model     : 'user',
       required  : true
