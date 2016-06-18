@@ -14,7 +14,7 @@ module.exports = {
       size    : 250
     },
     email: {
-      type    : 'email',
+      type    : 'string',
       required: true,
       unique  : true
     },
@@ -24,7 +24,7 @@ module.exports = {
     },
     events: {
       collection: 'event',
-      via       : 'owner'
+      via       : 'user'
     }, 
     toJSON: function () {
       var out = this.toObject();
