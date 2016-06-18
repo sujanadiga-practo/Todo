@@ -14,7 +14,7 @@ module.exports = {
     },
     dueDate: {
       type    : 'datetime',
-      required: true,
+      required: true
     },
     place: {
       type    : 'string',
@@ -25,13 +25,14 @@ module.exports = {
     },
     isDeleted: {
       type      : 'boolean',
-      defaultsTo: false,
+      defaultsTo: false
     },
     owner: {
       columnName: 'userId',
       model     : 'user',
       required  : true
     }
-  }
+  },
+  tableName: 'events'
 };
 
