@@ -1,6 +1,5 @@
 # Todo
-##Purpose
-An single page application for managing a TODO list
+An application for managing a TODO list
 
 ##Feature Specification
 1. Users can login
