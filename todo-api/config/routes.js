@@ -32,24 +32,6 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-
-
-   // Custom CRUD Rest Routes 
-  'post /users' : 'UserController.create',
-
-  'get /users/:id?' : 'UserController.find',
-
-  'put /users/:id' : 'UserController.update',
-
-  'delete /users/:id' : 'UserController.destroy',
-  
-  'post /events' : 'EventController.create',
-
-  'get /events/:id?' : 'EventController.find',
-
-  'put /events/:id' : 'EventController.update',
-
-  'delete /events/:id' : 'EventController.destroy',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
